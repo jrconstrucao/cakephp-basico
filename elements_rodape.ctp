@@ -1,4 +1,4 @@
-//Foi criado um element para o rodape.
+//Foi criado um element para o rodape
   <TR>
 		<TD colspan=2 valign=top>
 			<IMG src="img/hp/base/ba17.jpg" width=14 height=20></TD>
@@ -25,7 +25,7 @@
       <TABLE width="782" border="0" cellspacing="0" cellpadding="2" align="center" style="border-right:1px solid #000000; border-left:1px solid #000000;" background="img/hp/base/bg_table.gif">  
         <TR>     
           <TD width="5"><spacer type="block"  width="5">&nbsp;</TD>   
-          <TD align="right"><FONT face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFFFF">$conteudo</FONT></TD>    
+          <TD align="right"><FONT face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFFFF"><?php echo $conteudo ?></FONT></TD>    
           <TD width="5"><SPACER type="block"  width="5">&nbsp;</TD>  
         </TR>
       </TABLE>
