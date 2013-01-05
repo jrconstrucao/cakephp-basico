@@ -25,7 +25,7 @@
       <TABLE width="782" border="0" cellspacing="0" cellpadding="2" align="center" style="border-right:1px solid #000000; border-left:1px solid #000000;" background="img/hp/base/bg_table.gif">  
         <TR>     
           <TD width="5"><spacer type="block"  width="5">&nbsp;</TD>   
-          <TD align="right"><FONT face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFFFF">Evento fict&iacute;cio. Foi desenvolvido com Framework CakePHP</FONT></TD>    
+          <TD align="right"><FONT face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFFFF">$conteudo</FONT></TD>    
           <TD width="5"><SPACER type="block"  width="5">&nbsp;</TD>  
         </TR>
       </TABLE>
