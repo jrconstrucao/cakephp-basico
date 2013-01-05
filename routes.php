@@ -1,3 +1,3 @@
-//adicionei estas linhas, para chamar o controller pages, poderá ser chamado por dois modos : /pagina/ ou /  
+//adicionei estas linhas 
   Router::connect('/pagina/*', array('controller' => 'pages', 'action' => 'display'));
   Router::connect('/*', array('controller' => 'pages', 'action' => 'display'));
