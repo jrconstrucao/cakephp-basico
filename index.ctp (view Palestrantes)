@@ -1,15 +1,4 @@
 <?php echo $this->Html->css('boxes'); ?>
-<style>
-.titulo {
-  font-family: verdana;
-  font-size: 26px;
-}
-
-.texto {
-  font-family: arial;
-  font-size: 16px;
-}
-</style>
 
 <div id="div-centro">
 
@@ -21,7 +10,7 @@
             echo $p['Palestrante']['nome'] . ' - '. $p['Palestrante']['descricao'] .'<br>';
 
             $nome = Inflector::slug($p['Palestrante']['nome'], $replacement = '-');
-            echo $this->Html->link('ver mais', "/palestrantes/".$nome."/".$p['Palestrante']['id'], array('class' => '')) . '<br><br>';
+            echo $this->Html->link('ver mais', "/palestrantes/".$nome."/".$p['Palestrante']['id'], array('class' => 'verMais')) . '<br><br>';
 
         }
     ?>
