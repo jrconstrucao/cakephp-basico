@@ -1,0 +1,34 @@
+<?php
+
+class Palestra extends AppModel {
+    public $useTable = 'palestras';
+    
+    public $belongsTo = array('Palestrante');
+
+    public $order = array('inicio' => 'ASC');
+
+    public $validate = array(
+    	'nome' => array(
+          array(
+      			'rule' => 'notEmpty',
+            'message'=>'Campo vazio'	
+    			),
+          array(
+      			'rule' => 'isUnique',
+            'message'=>'Esta Palestra já está em uso'	
+    			)
+      ),
+      'inicio' => array (
+          'rule' => '/([0-9]+):([0-9]+)/',
+          'message'=>'A hora deverá ser no formato hh:mm'
+      
+      ),
+      'fim' => array (
+          'rule' => '/([0-9]+):([0-9]+)/',
+          'message'=>'A hora deverá ser no formato hh:mm'
+      
+      )
+		);
+}
+
+?>
