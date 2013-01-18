@@ -28,13 +28,20 @@
  * its action called 'display', and we pass a param to select the view file
  * to use (in this case, /app/View/Pages/home.ctp)...
  */
-  Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
+	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
   
 /**
  * ...and connect the rest of 'Pages' controller's urls.
  */
+  Router::connect('/palestrantes/:nome/:id', array('controller' => 'palestrantes', 'action' => 'consulta'),
+                                              array(
+                                                  'pass' => array('id'),
+                                                  'id' => '[0-9]+'));
   Router::connect('/pagina/*', array('controller' => 'pages', 'action' => 'display'));
   Router::connect('/inscricao', array('controller' => 'inscricoes', 'action' => 'inscrever'));
+  Router::connect('/palestra', array('controller' => 'palestras', 'action' => 'index'));
+  
+  Router::connect('/palestrante', array('controller' => 'palestrantes', 'action' => 'index'));
   Router::connect('/*', array('controller' => 'pages', 'action' => 'display'));
 	
 /**
