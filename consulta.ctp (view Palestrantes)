@@ -1,0 +1,24 @@
+<?php echo $this->Html->css('boxes'); ?>
+<style>
+.titulo {
+  font-family: verdana;
+  font-size: 26px;
+}
+
+.texto {
+  font-family: arial;
+  font-size: 16px;
+}
+</style>
+
+<div id="div-centro">
+
+    <span class='titulo'><?php echo $palestrantes['Palestrante']['nome']; ?></span><br><br>
+    
+    <div class='texto'>
+    <?php
+            echo $palestrantes['Palestrante']['endereco_site'] . ' - '. $palestrantes['Palestrante']['descricao'] .'<br>';
+    ?>
+    </div>
+
+</div>
