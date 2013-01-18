@@ -49,7 +49,6 @@ class InscricoesController extends AppController {
 
   				if($this->Inscricao->save($this->request->data)){					
 
-  					//$this->Session->setFlash('Cadastro com sucesso.');
   						 $this->redirect('/agradecimento');
   
   				}else{
