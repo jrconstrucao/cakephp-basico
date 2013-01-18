@@ -1,0 +1,37 @@
+<?php
+
+class Palestrante extends AppModel {
+    public $useTable = 'palestrantes';
+    
+    public $hasMany = array('Palestra');
+    
+    public $order = array('Palestrante.nome' => 'ASC');
+    
+    public $validate = array(
+    	'nome' => array ( 
+            array(
+        			'rule' => 'notEmpty',
+              'message'=>'Campo nome vazio'	
+      			) 
+        ),
+       'descricao' => array (
+            array(
+              'rule' => 'notEmpty',
+              'message'=>'Campo descricao vazio'            
+            )
+       ), 
+       'endereco_site' => array (
+            array (
+              'rule' => 'allowEmpty'
+            ),
+            array (
+              'rule' => 'url',
+              'messagem'=>'url incorreta'
+            )
+       )
+		);
+    
+    
+}
+
+?>
