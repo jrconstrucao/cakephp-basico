@@ -1,15 +1,5 @@
 <?php echo $this->Html->css('boxes'); ?>
-<style>
-.titulo {
-  font-family: verdana;
-  font-size: 26px;
-}
 
-.texto {
-  font-family: arial;
-  font-size: 16px;
-}
-</style>
 
 <div id="div-centro">
 
@@ -18,7 +8,8 @@
     <?php
         foreach ($palestras as $p) {
             echo $p['Palestra']['nome'] . ' - '. $p['Palestra']['descricao'] . ' <br>';
-            echo ' Horário: ' . $p['Palestra']['inicio'] . ' às ' . $p['Palestra']['fim'] . '<br>';
+            echo ' Horário: ' . $this->Time->format( $format = 'H:i', $p['Palestra']['inicio']) . ' às ' . $this->Time->format( $format = 'H:i', $p['Palestra']['fim']) . '<br>';
+
             echo '<br>';
         }
     ?>
